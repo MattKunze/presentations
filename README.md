@@ -3,7 +3,7 @@ presentations
 
 Notes for various presentations and talks
 
-```javascript+readonly
+```'javascript readonly'
 var foo = function(something) {
 }
 ```
