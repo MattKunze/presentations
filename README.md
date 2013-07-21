@@ -3,7 +3,7 @@ presentations
 
 Notes for various presentations and talks
 
-```javascript
+```javascript readonly
 var foo = function(whoosh) {
 }
 ```
