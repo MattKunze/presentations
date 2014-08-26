@@ -197,13 +197,27 @@ CountButton = React.createClass
 count = 1
 incrementCount = ->
   count++
-  button.setProps { count }
+  renderButton()
 
 
-button = CountButton { count, increment: incrementCount }
-React.renderComponent button, document.querySelector '#app'
+renderButton = ->
+  button = CountButton { count, increment: incrementCount }
+  React.renderComponent button, document.querySelector '#app'
+
+
+renderButton()
 ```
 
 ## Server side
 
-## Exercises left to the programmer...
+Given that React is almost a return to the old-school server model of *submit
+change to the server*, *render the full HTML document*, *send results back to
+the browser*, one side effect is that React can be used on the server side
+essentially the same as in the browser.
+
+```coffee
+Hello = React.createClass
+  render: -> h1 className: 'hello', "Hello, @props.name!"
+
+rendered = React.renderComponentToString Hello name: 'Someone'
+```
