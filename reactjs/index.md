@@ -59,6 +59,19 @@ transforms of their corresponding state.
 
 React provides *virtual DOM* which allows this to happen in a performant way.
 
+## Virtual DOM
+
+The virtual DOM allows us to model the UI at any point in time, and React will
+figure out the minimal changeset needed to update the actual DOM.
+
+> f(S1) => D1
+>
+> f(S2) => D2
+>
+> diff(D1, D2) => changeset
+
+![Virtual DOM](./img/virtual-dom.png)
+
 ## Data binding
 
 Data binding exposes internal application information to the user, and
